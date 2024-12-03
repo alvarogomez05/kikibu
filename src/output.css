@@ -973,6 +973,16 @@ video {
 }
 
 @media (min-width: 640px) {
+
+  .sm\:flex {
+    display: flex;
+  }
+
+  .sm\:hidden {
+    display: none;
+  }
+
+
   .sm\:w-\[150px\] {
     width: 150px;
   }
@@ -1021,6 +1031,14 @@ video {
 }
 
 @media (min-width: 1024px) {
+  .lg\:flex {
+    display: flex;
+  }
+
+  .lg\:hidden {
+    display: none;
+  }
+
   .lg\:w-\[250px\] {
     width: 250px;
   }
