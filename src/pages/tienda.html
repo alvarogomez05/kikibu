@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>kikibu | Tienda</title>
+  <link rel="shortcut icon" href="../assets/images/logo.png" type="image/x-icon">
+  <!-- tailwindcss -->
+  <link rel="stylesheet" href="../output.css">
+  
+</head>
+
+<body class="bg-white  container mx-auto font-sans">
+  <!-- <body class="bg-gray-100 font-sans container mx-auto"> -->
+
+  <!-- Encabezado -->
+
+  <header class=" flex flex-col items-center justify-center px-4 py-2 w-full">
+    <div class="flex justify-between  w-11/12">
+      <!-- logo -->
+      <img src="../assets/images/logo.png" alt="logo de kikibu" class="w-[150px] sm:w-[200px] lg:w-[250px]">
+      <!-- Menú principal -->
+      <nav class="hidden md:flex items-center">
+        <a href="../index.html" class="mx-2">Nosotros</a>
+        <a href="#" class="mx-2">Joyeria</a>
+        <a href="#" class="mx-2">Básicos</a>
+        <a href="#" class="mx-2">Baby</a>
+        <a href="#" class="mx-2">Papelería</a>
+        <a href="./monkibus.html" class="mx-2">Monkibus</a>
+        <a href="#" class="mx-2">Contacto</a>
+
+
+      </nav>
+      <button id="menubtn" class=" flex md:hidden "><svg xmlns=" http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+        viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </div>
+    <!-- Menú móvil -->
+    <nav id="mobilemenu" class="hidden w-full text-right">
+      <a href="../index.html" class="block">Nosotros</a>
+      <a href="#" class="block">Joyeria</a>
+      <a href="#" class="block">Básicos</a>
+      <a href="#" class="block">Baby</a>
+      <a href="#" class="block">Papelería</a>
+      <a href="./monkibus.html" class="block">Monkibus</a>
+      <a href="#" class="block">Contacto</a>
+
+    </nav>
+  </header>
+
+  <!-- Sección principal -->
+  <section class="container bg-white flex flex-col items-center py-10   mx-auto">
+    
+  
+
+  </section>
+
+  <!-- Pie de página -->
+  <footer class="">
+  </footer>
+  <script src="./js/script.js"></script>
+
+</body>
+
+</html>
+
+
+
+<!-- npx tailwindcss -i ./src/input.css -o ./src/output.css --watch -->

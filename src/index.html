@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TailwindCSS - Primero </title>
+  <title>kikibu | Regalos con sentido que despiertan emociones</title>
+  <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
   <!-- tailwindcss -->
   <link rel="stylesheet" href="output.css">
   
@@ -16,17 +17,17 @@
   <!-- Encabezado -->
 
   <header class=" flex flex-col items-center justify-center px-4 py-2 w-full">
-    <div class="flex justify-between  w-11/12  ">
+    <div class="flex justify-between  w-11/12">
       <!-- logo -->
       <img src="./assets/images/logo.png" alt="logo de kikibu" class="w-[150px] sm:w-[200px] lg:w-[250px]">
       <!-- Menú principal -->
       <nav class="hidden md:flex items-center">
-        <a href="#" class="mx-2">Nosotros</a>
-        <a href="#" class="mx-2">Joyeria</a>
-        <a href="#" class="mx-2">Básicos</a>
-        <a href="#" class="mx-2">Baby</a>
-        <a href="#" class="mx-2">Papelería</a>
-        <a href="#" class="mx-2">Monkibus</a>
+        <a href="./index.html" class="mx-2">Nosotros</a>
+        <a href="./pages/tienda.html" class="mx-2">Joyeria</a>
+        <a href="./pages/tienda.html" class="mx-2">Básicos</a>
+        <a href="./pages/tienda.html" class="mx-2">Baby</a>
+        <a href="./pages/tienda.html" class="mx-2">Papelería</a>
+        <a href="./pages/monkibus.html" class="mx-2">Monkibus</a>
         <a href="#" class="mx-2">Contacto</a>
 
 
@@ -39,20 +40,21 @@
     </div>
     <!-- Menú móvil -->
     <nav id="mobilemenu" class="hidden w-full text-right">
-      <a href="#" class="block">Nosotros</a>
-      <a href="#" class="block">Joyeria</a>
-      <a href="#" class="block">Básicos</a>
-      <a href="#" class="block">Papelería</a>
-      <a href="#" class="block">Monkibus</a>
+      <a href="./index.html" class="block">Nosotros</a>
+      <a href="./pages/tienda.html" class="block">Joyeria</a>
+      <a href="./pages/tienda.html" class="block">Básicos</a>
+      <a href="./pages/tienda.html" class="block">Baby</a>
+      <a href="./pages/tienda.html" class="block">Papelería</a>
+      <a href="./pages/monkibus.html" class="block">Monkibus</a>
       <a href="#" class="block">Contacto</a>
 
     </nav>
   </header>
 
   <!-- Sección principal -->
-  <section class="container bg-white flex flex-col items-center py-10 ">
+  <section class="container bg-white flex flex-col items-center py-10   mx-auto">
      <!-- Contenedor principal del carrusel -->
-      <article class="overflow-hidden relative">
+      <article class="overflow-hidden relative hidden sm:flex mx-auto">
         <!-- Carrusel -->
         <div class="flex transition-transform duration-500 ease-in-out sm:w-[500px] md:w-[700px] lg:w-[1000px] xl:w-[1200px] py-8" id="carousel">
           <!-- Imagenes del carrusel -->
@@ -74,25 +76,25 @@
 
       <!-- productos destacados -->
 
-      <article class="mx-auto my-8">
+      <article class="mx-auto my-8 w-full">
         <p class="text-center text-6xl text-gray-600 font-extrabold my-10">Productos destacados</p>
         <!-- caja para los productos -->
         <div class="flex justify-center flex-wrap mx-auto my-10">
           <div class="w-[300px] mx-6 shadow-xl  my-4">
             <img src="./assets/images/destacado1.jpeg" alt="prooductos destacados" class="w-full h-[280px] ">
-            <p class="text-center text-blue-300 my-4 text-xl font-extrabold">Calendario mesa 2025</p>
+            <p class="text-center text-gray-600 my-4 text-xl font-extrabold">Calendario mesa 2025</p>
           </div>
           <div class="w-[300px] mx-6 shadow-xl my-4">
             <img src="./assets/images/destacado2.jpeg" alt="prooductos destacados" class="w-full h-[280px]">
-            <p class="text-center text-blue-300 my-4 text-xl font-extrabold">Calendario pared 2025</p>
+            <p class="text-center text-gray-600 my-4 text-xl font-extrabold">Calendario pared 2025</p>
           </div>
           <div class="w-[300px] mx-6 shadow-xl my-4">
             <img src="./assets/images/destacado3.png" alt="prooductos destacados" class="w-full h-[280px]">
-            <p class="text-center text-blue-300 my-4 text-xl font-extrabold">Kikibu planner</p>
+            <p class="text-center text-gray-600 my-4 text-xl font-extrabold">Kikibu planner</p>
           </div>
           <div class="w-[300px] mx-6 shadow-xl my-4">
             <img src="./assets/images/destacado4.jpeg" alt="prooductos destacados" class="w-full h-[280px]">
-            <p class="text-center text-blue-300 my-4 text-xl font-extrabold">kikibu mochila</p>
+            <p class="text-center text-gray-600 my-4 text-xl font-extrabold">kikibu mochila</p>
           </div>
         </div>
 
@@ -100,7 +102,7 @@
 
       <!-- ¿Que es kikibu? -->
 
-      <article class="mx-auto my-8 px-6">
+      <article class="mx-auto my-8 px-6 w-full">
         <h1 class="text-center text-4xl text-gray-600 font-extrabold mt-6 mb-2"> Kikibú, un espacio creativo lleno de regalos con sentido</h1>
         <p class="text-center my-4 text-lg">Kikibú es una marca única y original que a través de sus diseños con sentido y mensajes positivos,
           hace que la vida se llene de emociones</p>
@@ -109,14 +111,38 @@
           <div class="flex flex-wrap justify-center items-center">
             <img src="./assets/images/quees_1.jpg" alt="" class="w-[300px] mx-4 my-4">
             <img src="./assets/images/kikibu-pulsera-3-sep.jpg" alt="" class="w-[300px] mx-4 my-4 hidden md:flex">
-            <img src="./assets/images/quees_2.jpg" alt="" class="w-[300px] mx-4 my-4 hidden lg:flex">
+            <img src="./assets/images/quees_2.jpg" alt="" class="w-[300px] mx-4 my-4 hidden xl:flex">
           </div>
           <div class="flex flex-wrap justify-center items-center">
             <img src="./assets/images/quees_3.jpg" alt="" class="w-[300px] mx-4 my-4">
             <img src="./assets/images/quees_4.jpg" alt="" class="w-[300px] mx-4 my-4 hidden md:flex">
-            <img src="./assets/images/quees_5.jpg" alt="" class="w-[300px] mx-4 my-4 hidden lg:flex">
+            <img src="./assets/images/quees_5.jpg" alt="" class="w-[300px] mx-4 my-4 hidden xl:flex">
           </div>
          </div>
+      </article>
+        <!-- ¿quienes somos? -->
+      <article class="mx-auto my-8 px-6 hidden lg:flex flex-col">
+        <h2 class="text-left text-4xl text-gray-600 font-extrabold mt-6 mb-2">¿Quienes somos?</h2>
+        <div class="flex justify-center items-start my-16">
+          <img src="./assets/images/Kikibu_Ana_Mar.jpg" alt="" class="mx-4">
+          <div class="mx-4 px-4 w-[600px]">
+            <p class="mt-6 text-gray-600 font-bold text-2xl">
+              Mar Kikibu
+            </p>
+            <p class="text-xl my-4">Su pasión era pintar zapatillas que vendía desde los 17 años.</p>
+            <p class="text-xl my-4">Su sueño era crear su propia marca, pero la vida le hizo tomar un camino diferente y durante un largo periodo de tiempo fue gerente de una multinacional.</p>
+            <p class="text-xl my-4">A los 35 años, ya siendo madre quiso conciliar su vida familiar y retomar su gran sueño. Fue entonces cuando creó Kikibú.</p>
+            <p class="text-xl my-4">En el momento de tomar esa decisión, todo parecía confabularse para que las cosas salieran bien y sintió la necesidad de gritarle al mundo que si se persigue aquello en lo que se cree, hay una fuerza especial que te empuja para conseguirlo.</p>
+            <p class="mt-6 text-gray-600 font-bold text-2xl">
+              Ana Kikibú
+            </p>
+            <p class="text-xl my-4">Ana ha estado ligada durante su vida profesional al mundo de la empresa del sector de bienes de consumo.</p>
+            <p class="text-xl my-4">Su espíritu soñador y entusiasta y su historia vital de mirar hacia adelante viendo siempre la parte buena de las cosas, convierten a Ana en una de las mejores embajadoras de kikibú.</p>
+            <p class="text-xl my-4">Aunque oficialmente se unió a Kikibú en septiembre de 2016, su implicación en la marca y su amistad incondicional viene de mucho tiempo atrás.</p>
+
+          </div>
+        </div>
+
       </article>
   
 
