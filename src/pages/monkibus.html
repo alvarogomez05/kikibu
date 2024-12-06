@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kikibu | Monkibus</title>
+    <link rel="shortcut icon" href="../assets/images/logo.png" type="image/x-icon">
+    <!-- tailwindcss -->
+    <link rel="stylesheet" href="../output.css">
+</head>
+
+<body class="bg-white  container mx-auto font-sans">
+    <!-- Encabezado -->
+    <header class=" flex flex-col items-center justify-center px-4 py-2 w-full">
+        <div class="flex justify-between  w-11/12">
+            <!-- logo -->
+            <img src="../assets/images/logo.png" alt="logo de kikibu" class="w-[150px] sm:w-[200px] lg:w-[250px]">
+            <!-- Menú principal -->
+            <nav class="hidden md:flex items-center">
+                <a href="../index.html" class="mx-2">Nosotros</a>
+                <a href="./tienda.html#joyeria" class="mx-2">Joyeria</a>
+                <a href="./tienda.html#basicos" class="mx-2">Básicos</a>
+                <a href="./tienda.html#baby" class="mx-2">Baby</a>
+                <a href="./tienda.html#papeleria" class="mx-2">Papelería</a>
+                <a href="./monkibus.html" class="mx-2">Monkibus</a>
+                <a href="#" class="mx-2">Contacto</a>
+
+
+            </nav>
+            <button id="menubtn" class=" flex md:hidden "><svg xmlns=" http://www.w3.org/2000/svg" class="h-6 w-6"
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        <!-- Menú móvil -->
+        <nav id="mobilemenu" class="hidden w-full text-right">
+            <a href="../index.html" class="block">Nosotros</a>
+            <a href="./tienda.html#joyeria" class="block">Joyeria</a>
+            <a href="./tienda.html#basicos" class="block">Básicos</a>
+            <a href="./tienda.html#baby" class="block">Baby</a>
+            <a href="./tienda.html#papeleria" class="block">Papelería</a>
+            <a href="./monkibus.html" class="block">Monkibus</a>
+            <a href="#" class="block">Contacto</a>
+
+        </nav>
+    </header>
+
+    <!-- Ventana modal -->
+    <section
+        class="modal flex w-full h-[100vh] z-10 bg-modal justify-center items-center absolute top-0 right-0">
+        <article class="flex gap-8 justify-center items-center relative p-8 bg-violet-600 rounded">
+            <p class="absolute top-0 right-0 p-2 bg-black text-white">X</p>
+            <img src="../assets/images/modal.jpg" alt="imagen de la ventana modal" class="w-[600px]">
+
+            <form action="#" novalidate>
+                <div class="flex gap-1">
+                    <div class="flex flex-col ">
+                        <label for="" class="text-white">Nombre</label>
+                        <input type="text" class="placeholder-white p-1 border-b border-white bg-transparent" required pattern="[A-Z]{1}[a-z]" placeholder="Nombre">
+                    </div>
+                    <div class="flex flex-col ">
+                        <label for="" class="text-white">Apellidos</label>
+                        <input type="text" class="placeholder-white p-1 border-b border-white bg-transparent" required pattern="[A-Z]{1}[a-z]" placeholder="Apellidos">
+                    </div>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <label for="" class="text-white">Telefono</label>
+                    <input type="text" class="placeholder-white p-1 border-b border-white bg-transparent m-1" placeholder="teléfono" required pattern="[0-9]{9}">
+                    <label for="" class="text-white">Correo</label>
+                    <input type="email" class="placeholder-white p-1 border-b border-white bg-transparent m-1" placeholder="ejemplo@gmail.com" required>
+                </div>
+
+                <div class="flex flex-col mt-4">
+                    <div class="flex">
+                        <input type="checkbox" name="" id="" required>
+                        <label for="" class="text-white">Acepto los terminos y condiciones de uso.</label>
+                    </div>
+                    <div class="flex">
+                        <input type="checkbox" name="" id="">
+                        <label for="" class="text-white">Quiero recibir noticias sobre vuestras novedades.</label>
+                    </div>
+                </div>
+
+                <div class="flex justify-end mt-4">
+                    <button type="submit" class="mx-2 bg-white p-1">ENVIAR</button>
+                    <button type="reset" class="mx-2 bg-white p-1">BORRAR</button>
+                </div>
+            </form>
+
+        </article>
+    </section>
+
+    <!-- Sección principal -->
+    <section class="container bg-white flex flex-col items-center py-10   mx-auto">
+
+
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="">
+    </footer>
+    <script src="../js/modal.js"></script>
+
+</body>
+
+</html>
