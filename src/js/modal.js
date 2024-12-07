@@ -8,9 +8,11 @@ const mostrar = () => {
     // document.body.style.overflow = "hidden";
 }
 
-const ocultar = () => {
-    modal.classList.remove("flex");
-    modal.classList.add("hidden");
+const ocultar = (event) => {
+    if(event.target.id == "cerrar"){
+        modal.classList.remove("flex");
+        modal.classList.add("hidden");
+    }
     //asi se desbloqueria el scroll vertical
     // document.body.style.overflow = "auto";
 }

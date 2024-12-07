@@ -49,27 +49,31 @@
 
     <!-- Ventana modal -->
     <section id="modal"
-        class="modal flex w-full h-full z-10 bg-modal justify-center items-center absolute top-0 right-0">
+        class="modal hidden w-full h-full z-10 bg-modal justify-center items-center absolute top-0 right-0">
         <article class="flex flex-wrap gap-8 justify-center items-center relative p-8 bg-violet-600 rounded container">
             <p class="absolute top-0 right-0 p-2 bg-black text-white" id="cerrar">X</p>
             <img src="../assets/images/modal.jpg" alt="imagen de la ventana modal" class="w-[600px]">
- 
+
             <form action="#" novalidate>
                 <div class="flex gap-1">
                     <div class="flex flex-col ">
                         <label for="" class="text-white">Nombre</label>
-                        <input type="text" class="placeholder-white p-1 border-b border-white bg-transparent" required pattern="[A-Z]{1}[a-z]" placeholder="Nombre">
+                        <input type="text" class="placeholder-white p-1 border-b border-white bg-transparent focus:outline-none" required
+                            pattern="[A-Z]{1}[a-z]" placeholder="Nombre">
                     </div>
                     <div class="flex flex-col ">
                         <label for="" class="text-white">Apellidos</label>
-                        <input type="text" class="placeholder-white p-1 border-b border-white bg-transparent" required pattern="[A-Z]{1}[a-z]" placeholder="Apellidos">
+                        <input type="text" class="placeholder-white p-1 border-b border-white bg-transparent focus:outline-none" required
+                            pattern="[A-Z]{1}[a-z]" placeholder="Apellidos">
                     </div>
                 </div>
                 <div class="flex flex-col gap-1">
                     <label for="" class="text-white">Telefono</label>
-                    <input type="text" class="placeholder-white p-1 border-b border-white bg-transparent m-1" placeholder="teléfono" required pattern="[0-9]{9}">
+                    <input type="text" class="placeholder-white p-1 border-b border-white bg-transparent m-1 focus:outline-none"
+                        placeholder="teléfono" required pattern="[0-9]{9}">
                     <label for="" class="text-white">Correo</label>
-                    <input type="email" class="placeholder-white p-1 border-b border-white bg-transparent m-1" placeholder="ejemplo@gmail.com" required>
+                    <input type="email" class="placeholder-white p-1 border-b border-white bg-transparent m-1 focus:outline-none"
+                        placeholder="ejemplo@gmail.com" required>
                 </div>
 
                 <div class="flex flex-col mt-4">
@@ -97,18 +101,192 @@
         <!-- imagen inicial -->
         <img src="../assets/images/fondo-monkibus.jpg" alt="">
         <!-- informacion -->
-        <article class="flex flex-col justify-between  m-8 lg:flex-row">
+        <article class="flex flex-col justify-between  mx-8 my-4 lg:flex-row">
             <div class="text-start md:text-center w-full md:w-[700px]">
                 <h1 class="text-blue-950 text-4xl font-bold">¿Qué es un monkibú?</h1>
-                <p class="mt-4">Hacer un Monkibú consiste en plasmar de una forma gráfica y sencilla a una persona o conjunto de personas, animales y cosas, transmitiendo los sentimientos, las emociones y las particularidades de cada “protagonista de la historia”.</p>
-                <p class="mt-4">Los Monkibús muestran siempre una gran sonrisa en cada personaje retratado y pueden recoger frases, fechas….y todo aquello que sea susceptible de representar</p>
-                <h2 class="text-blue-950 text-4xl mt-8 font-bold">¿Por qué a los Monkibús se les sale la sonrisa de la cara?</h2>
-                <p class="mt-4">Ni mucho menos quiere decir que nuestra vida sea un camino de rositas, pero preferimos mirar ¨pa´lante¨ fijarnos en todo lo bueno que nos rodea y creer que…a pesar de todo… la vida merece la pena!!!</p>
+                <p class="mt-4">Hacer un Monkibú consiste en plasmar de una forma gráfica y sencilla a una persona o
+                    conjunto de personas, animales y cosas, transmitiendo los sentimientos, las emociones y las
+                    particularidades de cada “protagonista de la historia”.</p>
+                <p class="mt-4">Los Monkibús muestran siempre una gran sonrisa en cada personaje retratado y pueden
+                    recoger frases, fechas….y todo aquello que sea susceptible de representar</p>
+                <h2 class="text-blue-950 text-4xl mt-8 font-bold">¿Por qué a los Monkibús se les sale la sonrisa de la
+                    cara?</h2>
+                <p class="mt-4">Ni mucho menos quiere decir que nuestra vida sea un camino de rositas, pero preferimos
+                    mirar ¨pa´lante¨ fijarnos en todo lo bueno que nos rodea y creer que…a pesar de todo… la vida merece
+                    la pena!!!</p>
             </div>
             <div class=" flex flex-col">
                 <img src="../assets/images/monkibus3.jpg" alt="" class="">
                 <img src="../assets/images/Monnkibus2.jpg" alt="" class="hidden lg:flex xl:hidden">
             </div>
+        </article>
+
+        <article class="flex flex-col justify-center items-center mx-8 my-4">
+            <p class="text-center text-4xl text-blue-950 font-extrabold my-10" id="joyeria">¿como hacerte con tu
+                monkibú?</p>
+            <!-- galeria pasos -->
+            <div class="flex flex-wrap gap-6 justify-center items-center w-full">
+                <img src="../assets/images/paso-1.jpg" alt="paso 1" class="w-[300px] shadow-xl">
+                <img src="../assets/images/paso-2.jpg" alt="paso 2" class="w-[300px] shadow-xl">
+                <img src="../assets/images/paso-3.jpg" alt="paso 3" class="w-[300px] shadow-xl">
+                <img src="../assets/images/paso-4.jpg" alt="paso 4" class="w-[300px] shadow-xl">
+            </div>
+        </article>
+
+        <!-- galeria de ejemplos -->
+
+        <article class="flex flex-col justify-center items-center mx-8 mt-8 md:hidden">
+            <p class="text-center text-4xl text-blue-950 font-extrabold my-10" id="joyeria">Ejemplos</p>
+            <div class="flex flex-wrap mx-4 gap-4 justify-center items-center mt-4">
+                <img src="../assets/images/ejemplos1.jpg" alt="" class="w-[150px]">
+                <img src="../assets/images/ejemplos2.jpg" alt="" class="w-[150px]">
+                <img src="../assets/images/ejemplos3.jpg" alt="" class="w-[150px]">
+                <img src="../assets/images/ejemplos4.jpg" alt="" class="w-[150px]">
+                <img src="../assets/images/ejemplos5.jpg" alt="" class="w-[150px]">
+                <img src="../assets/images/ejemplos6.jpg" alt="" class="w-[150px]">
+            </div>
+        </article>
+
+        <article class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md mt-8">
+            <h1 class="text-2xl font-bold mb-6">Pide tu presupuesto!!!</h1>
+            <div class="flex">
+                <div class="mx-auto flex flex-col justify-center items-center">
+                    <div class="flex flex-wrap justify-center items-center">
+                        <img src="../assets/images/ejemplos1.jpg" alt="" class="w-[200px] mx-4 my-4 hidden md:flex">
+                        <img src="../assets/images/ejemplos2.jpg" alt="" class="w-[200px] mx-4 my-4 hidden md:flex">
+                        <img src="../assets/images/ejemplos3.jpg" alt="" class="w-[200px] mx-4 my-4 hidden xl:flex">
+                    </div>
+                    <div class="flex flex-wrap justify-center items-center">
+                        <img src="../assets/images/ejemplos4.jpg" alt="" class="w-[200px] mx-4 my-4 hidden md:flex">
+                        <img src="../assets/images/ejemplos5.jpg" alt="" class="w-[200px] mx-4 my-4 hidden md:flex">
+                        <img src="../assets/images/ejemplos6.jpg" alt="" class="w-[200px] mx-4 my-4 hidden xl:flex">
+                    </div>
+                </div>
+                <!-- formulario presupuesto -->
+                <form class="mx-4">
+                    <!-- Número de personas -->
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-bold mb-2">¿Cuántas personas?</label>
+                        <div class="flex flex-wrap gap-4">
+                            <label>
+                                <input type="radio" name="personas" value="" class="mr-2"> 1
+                            </label>
+                            <label>
+                                <input type="radio" name="personas" value="" class="mr-2"> 2
+                            </label>
+                            <label>
+                                <input type="radio" name="personas" value="" class="mr-2"> 3
+                            </label>
+                            <label>
+                                <input type="radio" name="personas" value="" class="mr-2"> 4
+                            </label>
+                            <label>
+                                <input type="radio" name="personas" value="" class="mr-2"> 5
+                            </label>
+                            <label>
+                                <input type="radio" name="personas" value="" class="mr-2"> 6
+                            </label>
+                            <label>
+                                <input type="radio" name="personas" value="" class="mr-2"> 7
+                            </label>
+                            <label>
+                                <input type="radio" name="personas" value="" class="mr-2"> 8
+                            </label>
+                            <label>
+                                <input type="radio" name="personas" value="" class="mr-2"> 9
+                            </label>
+                            <label>
+                                <input type="radio" name="personas" value="" class="mr-2"> 10
+                            </label>
+                            <label>
+                                <input type="radio" name="personas" value="" class="mr-2"> 11
+                            </label>
+                            <label>
+                                <input type="radio" name="personas" value="" class="mr-2"> 12
+                            </label>
+
+
+                        </div>
+                    </div>
+
+                    <!-- Mascotas -->
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-bold mb-2">¿Mascotas?</label>
+                        <div class="flex gap-4">
+                            <label>
+                                <input type="radio" name="mascotas" value="" class="mr-2"> Sí
+                            </label>
+                            <label>
+                                <input type="radio" name="mascotas" value="" class="mr-2"> No
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Fondo -->
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-bold mb-2">¿Qué fondo quieres?</label>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <label>
+                                <input type="radio" name="fondo" value="" class="mr-2"> Sin Fondo
+                            </label>
+                            <label>
+                                <input type="radio" name="fondo" value="" class="mr-2"> Personalizado
+                            </label>
+                            <label>
+                                <input type="radio" name="fondo" value="" class="mr-2"> Estándar
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Enmarcado -->
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-bold mb-2">¿Enmarcado?</label>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <label>
+                                <input type="radio" name="enmarcado" value="" class="mr-2"> Sin enmarcar
+                            </label>
+                            <label>
+                                <input type="radio" name="enmarcado" value="" class="mr-2"> 30 x 40
+                            </label>
+                            <label>
+                                <input type="radio" name="enmarcado" value="" class="mr-2"> 40 x 50
+                            </label>
+                            <label>
+                                <input type="radio" name="enmarcado" value="" class="mr-2"> Otros formatos
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Información personal -->
+
+                    <div class="flex gap-4">
+                        <div class="mb-4">
+                            <label class="block text-gray-700 font-bold mb-2">Nombre</label>
+                            <input type="text" name="nombre" class="w-full border-b border-gray-700 px-4 py-2 focus:outline-none"
+                                placeholder="Tu nombre" required>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 font-bold mb-2">Apellidos</label>
+                            <input type="text" name="apellidos"
+                                class="w-full border-b border-gray-700  px-4 py-2 focus:outline-none" placeholder="Tus apellidos"
+                                required>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-bold mb-2">Email</label>
+                        <input type="email" name="email" class="w-full border-b border-gray-700 px-4 py-2 focus:outline-none"
+                            placeholder="Tu correo electrónico" required>
+                    </div>
+
+                    <!-- Botón de enviar -->
+                    <div>
+                        <button type="submit"
+                            class="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-lg">Enviar</button>
+                    </div>
+                </form>
+            </div>
+
         </article>
     </section>
 
@@ -116,7 +294,7 @@
     <footer class="">
     </footer>
     <script src="../js/modal.js"></script>
-
+    <script src="../js/script.js"></script>
 </body>
 
 </html>
