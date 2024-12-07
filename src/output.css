@@ -1058,6 +1058,10 @@ video {
   .lg\:w-\[250px\] {
     width: 250px;
   }
+
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 
 @media (min-width: 1280px) {
@@ -1071,6 +1075,10 @@ video {
 
   .xl\:w-\[1200px\] {
     width: 1200px;
+  }
+
+  .xl\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
