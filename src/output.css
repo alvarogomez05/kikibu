@@ -620,6 +620,14 @@ video {
   top: 0;
 }
 
+.m-4{
+  margin: 1rem;
+}
+
+.m-8{
+  margin: 8rem;
+}
+
 .mx-2 {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -670,6 +678,10 @@ video {
 
 .mt-6 {
   margin-top: 1.5rem;
+}
+
+.mt-8{
+  margin-top: 2rem;
 }
 
 .mb-4 {
@@ -1031,6 +1043,14 @@ video {
     display: flex;
   }
 
+  .lg\:hidden {
+    display: none;
+  }
+
+  .lg\:flex-row {
+    flex-direction: row;
+  }
+
   .lg\:w-\[1000px\] {
     width: 1000px;
   }
@@ -1043,6 +1063,10 @@ video {
 @media (min-width: 1280px) {
   .xl\:flex {
     display: flex;
+  }
+
+  .xl\:hidden {
+    display: none;
   }
 
   .xl\:w-\[1200px\] {

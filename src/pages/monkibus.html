@@ -50,7 +50,7 @@
     <!-- Ventana modal -->
     <section id="modal"
         class="modal flex w-full h-full z-10 bg-modal justify-center items-center absolute top-0 right-0">
-        <article class="flex gap-8 justify-center items-center relative p-8 bg-violet-600 rounded">
+        <article class="flex flex-wrap gap-8 justify-center items-center relative p-8 bg-violet-600 rounded container">
             <p class="absolute top-0 right-0 p-2 bg-black text-white" id="cerrar">X</p>
             <img src="../assets/images/modal.jpg" alt="imagen de la ventana modal" class="w-[600px]">
  
@@ -94,17 +94,20 @@
 
     <!-- Sección principal -->
     <section class="container bg-white flex flex-col items-center py-10   mx-auto">
+        <!-- imagen inicial -->
         <img src="../assets/images/fondo-monkibus.jpg" alt="">
-        <article class="flex justify-between ">
-            <div>
-                <h1>¿Qué es un monkibú?</h1>
-                <p>Hacer un Monkibú consiste en plasmar de una forma gráfica y sencilla a una persona o conjunto de personas, animales y cosas, transmitiendo los sentimientos, las emociones y las particularidades de cada “protagonista de la historia”.</p>
-                <p>Los Monkibús muestran siempre una gran sonrisa en cada personaje retratado y pueden recoger frases, fechas….y todo aquello que sea susceptible de representar</p>
-                <h2>¿Por qué a los Monkibús se les sale la sonrisa de la cara?</h2>
-                <p>Ni mucho menos quiere decir que nuestra vida sea un camino de rositas, pero preferimos mirar ¨pa´lante¨ fijarnos en todo lo bueno que nos rodea y creer que…a pesar de todo… la vida merece la pena!!!</p>
+        <!-- informacion -->
+        <article class="flex flex-col justify-between  m-8 lg:flex-row">
+            <div class="text-start md:text-center w-full md:w-[700px]">
+                <h1 class="text-blue-950 text-4xl font-bold">¿Qué es un monkibú?</h1>
+                <p class="mt-4">Hacer un Monkibú consiste en plasmar de una forma gráfica y sencilla a una persona o conjunto de personas, animales y cosas, transmitiendo los sentimientos, las emociones y las particularidades de cada “protagonista de la historia”.</p>
+                <p class="mt-4">Los Monkibús muestran siempre una gran sonrisa en cada personaje retratado y pueden recoger frases, fechas….y todo aquello que sea susceptible de representar</p>
+                <h2 class="text-blue-950 text-4xl mt-8 font-bold">¿Por qué a los Monkibús se les sale la sonrisa de la cara?</h2>
+                <p class="mt-4">Ni mucho menos quiere decir que nuestra vida sea un camino de rositas, pero preferimos mirar ¨pa´lante¨ fijarnos en todo lo bueno que nos rodea y creer que…a pesar de todo… la vida merece la pena!!!</p>
             </div>
-            <div>
-                <img src="../assets/images/monkibus3.jpg" alt="" class="w-[300px]">
+            <div class=" flex flex-col">
+                <img src="../assets/images/monkibus3.jpg" alt="" class="">
+                <img src="../assets/images/Monnkibus2.jpg" alt="" class="hidden lg:flex xl:hidden">
             </div>
         </article>
     </section>
