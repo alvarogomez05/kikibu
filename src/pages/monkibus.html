@@ -8,6 +8,8 @@
     <link rel="shortcut icon" href="../assets/images/logo.png" type="image/x-icon">
     <!-- tailwindcss -->
     <link rel="stylesheet" href="../output.css">
+    <!-- validacion -->
+    <link rel="stylesheet" href="../css/validacion.css">
 </head>
 
 <body class="bg-white  container mx-auto font-sans">
@@ -54,31 +56,35 @@
             <p class="absolute top-0 right-0 p-2 bg-black text-white" id="cerrar">X</p>
             <img src="../assets/images/modal.jpg" alt="imagen de la ventana modal" class="w-[600px]">
 
-            <form action="#" novalidate>
+            <form action="#" novalidate class="formulario2" id="form2">
                 <div class="flex gap-1">
                     <div class="flex flex-col ">
                         <label for="" class="text-white">Nombre</label>
-                        <input type="text" class="placeholder-white p-1 border-b border-white bg-transparent focus:outline-none" required
-                            pattern="[A-Z]{1}[a-z]" placeholder="Nombre">
+                        <input type="text"
+                            class="text-white placeholder-white p-1 border-b border-white bg-transparent focus:outline-none"
+                            required pattern="^[A-Z][a-z]*$" placeholder="Nombre" id="nombre2">
                     </div>
                     <div class="flex flex-col ">
                         <label for="" class="text-white">Apellidos</label>
-                        <input type="text" class="placeholder-white p-1 border-b border-white bg-transparent focus:outline-none" required
-                            pattern="[A-Z]{1}[a-z]" placeholder="Apellidos">
+                        <input type="text"
+                            class="text-white placeholder-white p-1 border-b border-white bg-transparent focus:outline-none"
+                            required pattern="^[A-Z][a-z]+ [A-Z][a-z]+$" placeholder="Apellidos" id="apellidos2">
                     </div>
                 </div>
                 <div class="flex flex-col gap-1">
                     <label for="" class="text-white">Telefono</label>
-                    <input type="text" class="placeholder-white p-1 border-b border-white bg-transparent m-1 focus:outline-none"
-                        placeholder="teléfono" required pattern="[0-9]{9}">
+                    <input type="text"
+                        class="text-white placeholder-white p-1 border-b border-white bg-transparent m-1 focus:outline-none"
+                        placeholder="teléfono" required pattern="[0-9]{9}" id="telefono">
                     <label for="" class="text-white">Correo</label>
-                    <input type="email" class="placeholder-white p-1 border-b border-white bg-transparent m-1 focus:outline-none"
-                        placeholder="ejemplo@gmail.com" required>
+                    <input type="email"
+                        class="text-white placeholder-white p-1 border-b border-white bg-transparent m-1 focus:outline-none"
+                        placeholder="ejemplo@gmail.com" required id="email2">
                 </div>
 
                 <div class="flex flex-col mt-4">
                     <div class="flex">
-                        <input type="checkbox" name="" id="" required>
+                        <input type="checkbox" name="" id="terms" required>
                         <label for="" class="text-white">Acepto los terminos y condiciones de uso.</label>
                     </div>
                     <div class="flex">
@@ -86,6 +92,9 @@
                         <label for="" class="text-white">Quiero recibir noticias sobre vuestras novedades.</label>
                     </div>
                 </div>
+
+                <!-- mensaje de error -->
+                <p class=" my-4 text-xl font-bold text-red-500" id="error2"></p>
 
                 <div class="flex justify-end mt-4">
                     <button type="submit" class="mx-2 bg-white p-1">ENVIAR</button>
@@ -163,49 +172,14 @@
                     </div>
                 </div>
                 <!-- formulario presupuesto -->
-                <form class="mx-4">
+                <form class="mx-4 formulario" id="form" novalidate>
                     <!-- Número de personas -->
                     <div class="mb-4">
                         <label class="block text-gray-700 font-bold mb-2">¿Cuántas personas?</label>
                         <div class="flex flex-wrap gap-4">
-                            <label>
-                                <input type="radio" name="personas" value="" class="mr-2"> 1
-                            </label>
-                            <label>
-                                <input type="radio" name="personas" value="" class="mr-2"> 2
-                            </label>
-                            <label>
-                                <input type="radio" name="personas" value="" class="mr-2"> 3
-                            </label>
-                            <label>
-                                <input type="radio" name="personas" value="" class="mr-2"> 4
-                            </label>
-                            <label>
-                                <input type="radio" name="personas" value="" class="mr-2"> 5
-                            </label>
-                            <label>
-                                <input type="radio" name="personas" value="" class="mr-2"> 6
-                            </label>
-                            <label>
-                                <input type="radio" name="personas" value="" class="mr-2"> 7
-                            </label>
-                            <label>
-                                <input type="radio" name="personas" value="" class="mr-2"> 8
-                            </label>
-                            <label>
-                                <input type="radio" name="personas" value="" class="mr-2"> 9
-                            </label>
-                            <label>
-                                <input type="radio" name="personas" value="" class="mr-2"> 10
-                            </label>
-                            <label>
-                                <input type="radio" name="personas" value="" class="mr-2"> 11
-                            </label>
-                            <label>
-                                <input type="radio" name="personas" value="" class="mr-2"> 12
-                            </label>
-
-
+                            <input type="number" min="1" max="12" placeholder="1-12"
+                                class="w-full border-b border-gray-700 px-4 py-2 focus:outline-none" id="personas"
+                                required>
                         </div>
                     </div>
 
@@ -213,12 +187,12 @@
                     <div class="mb-4">
                         <label class="block text-gray-700 font-bold mb-2">¿Mascotas?</label>
                         <div class="flex gap-4">
-                            <label>
-                                <input type="radio" name="mascotas" value="" class="mr-2"> Sí
-                            </label>
-                            <label>
-                                <input type="radio" name="mascotas" value="" class="mr-2"> No
-                            </label>
+                            <select name="" id="mascotas" required
+                                class="w-full border-b border-gray-700 px-4 py-2 focus:outline-none">
+                                <option value=""></option>
+                                <option value="">Si</option>
+                                <option value="">No</option>
+                            </select>
                         </div>
                     </div>
 
@@ -226,34 +200,13 @@
                     <div class="mb-4">
                         <label class="block text-gray-700 font-bold mb-2">¿Qué fondo quieres?</label>
                         <div class="flex flex-col sm:flex-row gap-4">
-                            <label>
-                                <input type="radio" name="fondo" value="" class="mr-2"> Sin Fondo
-                            </label>
-                            <label>
-                                <input type="radio" name="fondo" value="" class="mr-2"> Personalizado
-                            </label>
-                            <label>
-                                <input type="radio" name="fondo" value="" class="mr-2"> Estándar
-                            </label>
-                        </div>
-                    </div>
-
-                    <!-- Enmarcado -->
-                    <div class="mb-4">
-                        <label class="block text-gray-700 font-bold mb-2">¿Enmarcado?</label>
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <label>
-                                <input type="radio" name="enmarcado" value="" class="mr-2"> Sin enmarcar
-                            </label>
-                            <label>
-                                <input type="radio" name="enmarcado" value="" class="mr-2"> 30 x 40
-                            </label>
-                            <label>
-                                <input type="radio" name="enmarcado" value="" class="mr-2"> 40 x 50
-                            </label>
-                            <label>
-                                <input type="radio" name="enmarcado" value="" class="mr-2"> Otros formatos
-                            </label>
+                            <select name="" id="fondo" required
+                                class="w-full border-b border-gray-700 px-4 py-2 focus:outline-none">
+                                <option value=""></option>
+                                <option value="">Si</option>
+                                <option value="">No</option>
+                                <option value="">Personalizado</option>
+                            </select>
                         </div>
                     </div>
 
@@ -262,23 +215,26 @@
                     <div class="flex gap-4">
                         <div class="mb-4">
                             <label class="block text-gray-700 font-bold mb-2">Nombre</label>
-                            <input type="text" name="nombre" class="w-full border-b border-gray-700 px-4 py-2 focus:outline-none"
-                                placeholder="Tu nombre" required>
+                            <input type="text" name="nombre"
+                                class="w-full border-b border-gray-700 px-4 py-2 focus:outline-none"
+                                placeholder="Nombre" required pattern="^[A-Z][a-z]*$" id="nombre">
                         </div>
                         <div class="mb-4">
                             <label class="block text-gray-700 font-bold mb-2">Apellidos</label>
                             <input type="text" name="apellidos"
-                                class="w-full border-b border-gray-700  px-4 py-2 focus:outline-none" placeholder="Tus apellidos"
-                                required>
+                                class="w-full border-b border-gray-700  px-4 py-2 focus:outline-none"
+                                placeholder="Apellidos" required pattern="^[A-Z][a-z]+ [A-Z][a-z]+$" id="apellidos">
                         </div>
                     </div>
 
                     <div class="mb-4">
                         <label class="block text-gray-700 font-bold mb-2">Email</label>
-                        <input type="email" name="email" class="w-full border-b border-gray-700 px-4 py-2 focus:outline-none"
-                            placeholder="Tu correo electrónico" required>
+                        <input type="email" name="email"
+                            class="w-full border-b border-gray-700 px-4 py-2 focus:outline-none"
+                            placeholder="Correo electrónico" required id="email">
                     </div>
-
+                    <!-- mensaje de error -->
+                    <p class=" my-4 text-xl font-bold text-red-500" id="error"></p>
                     <!-- Botón de enviar -->
                     <div>
                         <button type="submit"
@@ -290,89 +246,91 @@
         </article>
     </section>
 
-      <!-- Pie de página -->
-  <footer class="container bg-gray-100 flex flex-col items-center justify-start  md:flex-row flex-wrap md:items-start md:justify-center py-10 mx-auto mt-12">
-    <article>
-      <img src="../assets/images/logo.png" alt="logo de kikibu" class="w-[300px] mx-8">
-      <img src="../assets/images/iconos.png" alt="iconos" class="w-[300px] mx-8 mt-4">
-    </article>
-    <!-- nosotros -->
-    <article class="flex gap-12 items-start">
+    <!-- Pie de página -->
+    <footer
+        class="container bg-gray-100 flex flex-col items-center justify-start  md:flex-row flex-wrap md:items-start md:justify-center py-10 mx-auto mt-12">
+        <article>
+            <img src="../assets/images/logo.png" alt="logo de kikibu" class="w-[300px] mx-8">
+            <img src="../assets/images/iconos.png" alt="iconos" class="w-[300px] mx-8 mt-4">
+        </article>
+        <!-- nosotros -->
+        <article class="flex gap-12 items-start">
 
-      <div class="flex flex-col gap-4 w-[150px] mx-8">
-        <p class="text-2xl border-b-2 border-black w-full font-bold">Kikibú</p>
-        <ul class="ul ml-4">
-          <a href="../index.html">
-            <li>Nosotros</li>
-          </a>
-          <a href="./tienda.html#joyeria">
-            <li>Joyeria</li>
-          </a>
-          <a href="./tienda.html#basicos">
-            <li>Básicos</li>
-          </a>
-          <a href="./tienda.html#baby">
-            <li>Baby</li>
-          </a>
-          <a href="./tienda.html#papeleria">
-            <li>Papelería</li>
-          </a>
-          <a href="./monkibus.html">
-            <li>Monkibus</li>
-          </a>
-        </ul>
-      </div>
-
-
-    </article>
-    <!-- contacto -->
-    <article class="flex gap-12 items-start">
-
-      <div class="flex flex-col gap-4 w-[200px] mx-8">
-        <p class="text-2xl border-b-2 border-black w-full font-bold">Contacto</p>
-        <ul class="ul ml-4">
-          <a href="">
-            <li>999 999 999</li>
-          </a>
-          <a href="">
-            <li>600 000 001</li>
-          </a>
-          <a href="">
-            <li>kikibu@ejemplo.com</li>
-          </a>
-        </ul>
-      </div>
+            <div class="flex flex-col gap-4 w-[150px] mx-8">
+                <p class="text-2xl border-b-2 border-black w-full font-bold">Kikibú</p>
+                <ul class="ul ml-4">
+                    <a href="../index.html">
+                        <li>Nosotros</li>
+                    </a>
+                    <a href="./tienda.html#joyeria">
+                        <li>Joyeria</li>
+                    </a>
+                    <a href="./tienda.html#basicos">
+                        <li>Básicos</li>
+                    </a>
+                    <a href="./tienda.html#baby">
+                        <li>Baby</li>
+                    </a>
+                    <a href="./tienda.html#papeleria">
+                        <li>Papelería</li>
+                    </a>
+                    <a href="./monkibus.html">
+                        <li>Monkibus</li>
+                    </a>
+                </ul>
+            </div>
 
 
-    </article>
-    <!-- redes sociales -->
-    <article class="flex gap-12 items-start">
-      <div class="flex flex-col gap-4 w-[200px] mx-8">
-        <p class="text-2xl border-b-2 border-black w-full font-bold">Redes sociales</p>
-        <ul class="ul ml-4 flex gap-4">
-          <a href="">
-            <li><img src="../assets/images/whatsapp.png" alt="" class="rounded"></li>
-          </a>
-          <a href="">
-            <li><img src="../assets/images/instagram.png" alt="" class="rounded"></li>
-          </a>
-          <a href="">
-            <li><img src="../assets/images/twitter.png" alt="" class="rounded"></li>
-          </a>
-          <a href="">
-            <li><img src="../assets/images/facebook.png" alt="" class="rounded"></li>
-          </a>
-        </ul>
-      </div>
+        </article>
+        <!-- contacto -->
+        <article class="flex gap-12 items-start">
+
+            <div class="flex flex-col gap-4 w-[200px] mx-8">
+                <p class="text-2xl border-b-2 border-black w-full font-bold">Contacto</p>
+                <ul class="ul ml-4">
+                    <a href="">
+                        <li>999 999 999</li>
+                    </a>
+                    <a href="">
+                        <li>600 000 001</li>
+                    </a>
+                    <a href="">
+                        <li>kikibu@ejemplo.com</li>
+                    </a>
+                </ul>
+            </div>
 
 
-    </article>
-  </footer>
+        </article>
+        <!-- redes sociales -->
+        <article class="flex gap-12 items-start">
+            <div class="flex flex-col gap-4 w-[200px] mx-8">
+                <p class="text-2xl border-b-2 border-black w-full font-bold">Redes sociales</p>
+                <ul class="ul ml-4 flex gap-4">
+                    <a href="">
+                        <li><img src="../assets/images/whatsapp.png" alt="" class="rounded"></li>
+                    </a>
+                    <a href="">
+                        <li><img src="../assets/images/instagram.png" alt="" class="rounded"></li>
+                    </a>
+                    <a href="">
+                        <li><img src="../assets/images/twitter.png" alt="" class="rounded"></li>
+                    </a>
+                    <a href="">
+                        <li><img src="../assets/images/facebook.png" alt="" class="rounded"></li>
+                    </a>
+                </ul>
+            </div>
+
+
+        </article>
+    </footer>
 
 
     <!-- enlaces a js -->
     <script src="../js/modal.js"></script>
     <script src="../js/script.js"></script>
+    <script src="../js/validacion.js"></script>
 </body>
 
 </html>

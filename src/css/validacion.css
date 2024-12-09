@@ -1,0 +1,25 @@
+.formulario input:valid {
+    border-color: green;
+}
+
+.formulario input:invalid {
+    border-color: red;
+}
+
+.formulario select:valid {
+    border-color: green;
+}
+
+.formulario select:invalid {
+    border-color: red;
+}
+
+/* formulario de la ventana modal */
+
+.formulario2 input:valid {
+    border-color: green;
+}
+
+.formulario2 input:invalid {
+    border-color: red;
+}
